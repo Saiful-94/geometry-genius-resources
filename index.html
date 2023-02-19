@@ -30,23 +30,32 @@
     <main>
 
         <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
-            <div class="angles-details w-[70%] bg-green-500 mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="angles-details w-[70%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div class="card-1">
                     <div class="card w-full bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                           <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
                         </figure>
                         <div class="card-body items-center text-center">
-                          <h2 class="card-title">Triangle</h2>
-                          <p>Area (A) = 0.5 b h</p>
-                          <div class="input-field">
-                            <label class="label">
-                                <span class="label-text">b</span>
+                          <h2 id="firstName" class="card-title">Triangle</h2>
+                          <p id="firstCardArea" >Area (A) = 0.5 b h</p>
+                          <div class="flex">
+                            <div class="input-field">
+                              <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs" />
+                              <label class="label">
+                                <span class="label-text">cm</span>
                               </label>
-                              <input type="text" placeholder="Type" class="input input-bordered w-full max-w-xs" />
                           </div>
+                          <div class="input-field">
+                            <input type="text" placeholder="h" class="input input-bordered w-full max-w-xs" />
+                            <label class="label">
+                              <span class="label-text">cm</span>
+                            </label>
+                        </div>
+                          </div>
+
                           <div class="card-actions">
-                            <button class="btn btn-primary">Calculate</button>
+                            <button id="btn-first" class="btn btn-primary">Calculate</button>
                           </div>
                         </div>
                       </div>
@@ -60,6 +69,20 @@
                         <div class="card-body items-center text-center">
                           <h2 class="card-title">Rectangle</h2>
                           <p>Area (A) = 0.5 b h</p>
+                          <div class="flex">
+                            <div class="input-field">
+                              <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs" />
+                              <label class="label">
+                                <span class="label-text">cm</span>
+                              </label>
+                          </div>
+                          <div class="input-field">
+                            <input type="text" placeholder="h" class="input input-bordered w-full max-w-xs" />
+                            <label class="label">
+                              <span class="label-text">cm</span>
+                            </label>
+                        </div>
+                          </div>
                           <div class="card-actions">
                             <button class="btn btn-primary">Calculate</button>
                           </div>
@@ -76,6 +99,7 @@
                           <h2 class="card-title">Parallelogram</h2>
                           <p>Area (A) = 0.5 b h</p>
                           <p>b=10cm, h=12cm</p>
+                          
                           <div class="card-actions">
                             <button class="btn btn-primary">Calculate</button>
                           </div>
@@ -134,6 +158,26 @@
 
             <div class="calculation-details bg-slate-50 w-[25%] mx-auto mt-5 h-80 area-cal">
                 <h1 class="text-3xl text-center font-bold underline">Area Calculation</h1>
+
+                <div class="overflow-x-auto">
+                  <table class="table w-full mt-2">
+                    <!-- head -->
+                    <thead>
+                      <tr>
+                        <th></th>
+                        
+                        <th>Name</th>
+                        <th>Area</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-container">
+
+                    </tbody>
+                    
+                  </table>
+                </div>
+               
 
             </div>
         </section>
